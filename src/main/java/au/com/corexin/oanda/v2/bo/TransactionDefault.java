@@ -1,0 +1,11 @@
+package au.com.corexin.oanda.v2.bo;
+
+public class TransactionDefault extends TransactionSimple {
+    public Integer expiry;
+    public OandaTypes.Reason reason;
+    public Float lowerBound;
+    public Float upperBound;
+    public Float takeProfitPrice;
+    public Float stopLossPrice;
+    public Float trailingStopLossDistance;
+}
