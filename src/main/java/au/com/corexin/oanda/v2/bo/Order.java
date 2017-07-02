@@ -1,12 +1,14 @@
 package au.com.corexin.oanda.v2.bo;
 
+import au.com.corexin.oanda.v2.bo.type.Side;
+
 public class Order extends AbstractOandaBo {
 	public long id;
 	public String instrument;
 	public String time;
 	public float price;
 	public OandaTypes.OrderType type;
-	public OandaTypes.Side side;
+	public Side side;
 
 	@Override
 	public String toString() {

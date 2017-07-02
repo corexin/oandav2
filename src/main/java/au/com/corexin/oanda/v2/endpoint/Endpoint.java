@@ -73,6 +73,16 @@ public abstract class Endpoint implements OandaJsonKey, OandaConstants {
         return request.header("Authorization", String.format("Bearer %s", OAUTH_KEY)).asJson();
     }
 
+
+    public HttpResponse<JsonNode> Put(Map<String, String> routeParams, String endpoint) throws UnirestException {
+
+        HttpRequestWithBody request = Unirest.put(endpoint);
+        if (routeParams != null && routeParams.size() > 0)
+            this.setContextPathParams(endpoint, request, routeParams);
+
+        return request.header("Authorization", String.format("Bearer %s", OAUTH_KEY)).asJson();
+    }
+
     protected String makeEndpoint(AccountType accountType, String contextPath) {
 
         if (accountType == AccountType.Practice)
@@ -97,5 +107,11 @@ public abstract class Endpoint implements OandaJsonKey, OandaConstants {
         }
 
         return request;
+    }
+
+    protected void throwErrorsIfAny(HttpResponse<JsonNode> jsonResponse) throws UnirestException
+    {
+        if (jsonResponse.getStatus() > 299 || jsonResponse.getStatus() < 200)
+            throw new UnirestException(jsonResponse.getBody().toString());
     }
 }

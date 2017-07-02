@@ -17,7 +17,7 @@ public class AccountConverter extends AbstractOandaJsonConverter {
 		account.accountName = jsonResult.getString(ALIAS);
 		account.balance = jsonResult.getDouble(BALANCE);
 
-		account.unrealizedPl = jsonResult.getDouble(unrealizedPl);
+		account.unrealizedPl = jsonResult.getDouble(unrealizedPL);
 		account.nav = jsonResult.getDouble(NAV);
 		account.marginUsed = jsonResult.getDouble(marginUsed);
 		account.marginAvailable = jsonResult.getDouble(marginAvailable);

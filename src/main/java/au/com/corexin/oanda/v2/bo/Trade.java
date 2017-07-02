@@ -1,9 +1,11 @@
 package au.com.corexin.oanda.v2.bo;
 
+import au.com.corexin.oanda.v2.bo.type.Side;
+
 public class Trade extends AbstractOandaBo {
 	public long id;
 	public int units;
-	public OandaTypes.Side side;
+	public Side side;
 	public String instrument;
 	public String time;
 	public float price;

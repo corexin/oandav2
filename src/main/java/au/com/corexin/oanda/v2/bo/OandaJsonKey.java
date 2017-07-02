@@ -2,6 +2,12 @@ package au.com.corexin.oanda.v2.bo;
 
 public interface OandaJsonKey {
 
+	// common
+	public static final String resettablePL = "resettablePL";
+	public static final String financing = "financing";
+	public static final String unrealizedPL = "unrealizedPL";
+
+
 	// Account
 	public static final String createdByUserID = "createdByUserID";
 	public static final String NAV = "NAV";
@@ -14,8 +20,6 @@ public interface OandaJsonKey {
 	public static final String marginCallPercent = "marginCallPercent";
 	public static final String balance = "balance";
 	public static final String lastTransactionID = "lastTransactionID";
-	public static final String resettablePL = "resettablePL";
-	public static final String financing = "financing";
 	public static final String createdTime = "createdTime";
 	public static final String alias = "alias";
 	public static final String currency = "currency";
@@ -30,7 +34,7 @@ public interface OandaJsonKey {
 	public static final String marginAvailable = "marginAvailable";
 	public static final String marginCloseoutPositionValue = "marginCloseoutPositionValue";
 	public static final String marginCloseoutMarginUsed = "marginCloseoutMarginUsed";
-	public static final String unrealizedPL = "unrealizedPL";
+
 	public static final String marginCloseoutNAV = "marginCloseoutNAV";
 	public static final String marginUsed = "marginUsed";
 	public static final String orders = "orders";
@@ -43,18 +47,20 @@ public interface OandaJsonKey {
 	public static final String ACCOUNTID = "accountId";
 	public static final String ACCOUNTNAME = "accountName";
 	public static final String BALANCE = "balance";
-	public static final String unrealizedPl = "unrealizedPL";
 	public static final String realizedPl = "realizedPL";
 	public static final String openTrades = "openTradeCount";
 	public static final String openOrders = "pendingOrderCount";
 
-
-
+	// position
 	public static final String PIP = "pip";
 	public static final String MAX_TRADE_UNITS = "maxTradeUnits";
 	public static final String INSTRUMENT = "instrument";
 	public static final String DISPLAY_NAME = "displayName";
 	public static final String INSTRUMENTS = "instruments";
+	public static final String tradeIDs = "tradeIDs";
+	public static final String units = "units";
+	public static final String averagePrice = "averagePrice";
+
 
 	public static final String TIME = "time";
 	public static final String UNITS = "units";

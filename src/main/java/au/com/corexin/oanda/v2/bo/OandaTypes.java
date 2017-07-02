@@ -4,11 +4,6 @@ public final class OandaTypes {
     private OandaTypes() {
     }
 
-    public static enum Side {
-        buy,
-        sell
-    }
-
     public static enum OrderType {
         limit,
         stop,
