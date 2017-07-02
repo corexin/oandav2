@@ -43,8 +43,13 @@ public class Utils {
 		return result;
 	}
 
+	public static DateTime timeAsUTC(DateTime dateTime) {
+		return dateTime.withMillisOfSecond(0).withZone(DateTimeZone.forOffsetHours(10))
+				.toDateTime(DateTimeZone.UTC);
+	}
+
 	public static DateTime fromUTCStringToLocalTime(String utcTime) {
-		return ISODateTimeFormat.dateTime().withZone(DateTimeZone.UTC).parseDateTime(utcTime).toDateTime(new DateTime().getZone());
+		return ISODateTimeFormat.dateTime().withZone(DateTimeZone.UTC).parseDateTime(utcTime).withZone(DateTimeZone.forID("Australia/Brisbane"));
 	}
 
 	public static DateTime utcToLocalTime(DateTime utcTime) {

@@ -13,6 +13,7 @@ public class Price extends AbstractOandaBo {
 	public DateTime dateTime;
 	public float bid;
 	public float ask;
+	public float price;
 	public String status;
 
 	public static Price newPrice(float p) {

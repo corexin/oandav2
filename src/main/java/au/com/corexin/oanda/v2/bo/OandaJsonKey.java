@@ -44,7 +44,7 @@ public interface OandaJsonKey {
 	public static final String  ALIAS = "alias";
 	public static final String ACCOUNT = "account";
 	public static final String ACCOUNT_ID = "account_id";
-	public static final String ACCOUNTID = "accountId";
+	public static final String ACCOUNTID = "accountID";
 	public static final String ACCOUNTNAME = "accountName";
 	public static final String BALANCE = "balance";
 	public static final String realizedPl = "realizedPL";
@@ -61,6 +61,20 @@ public interface OandaJsonKey {
 	public static final String units = "units";
 	public static final String averagePrice = "averagePrice";
 
+	// price
+	public static final String MID = "mid";
+	public static final String LOW = "l";
+	public static final String HIGH = "h";
+	public static final String CLOSE = "c";
+	public static final String OPEN = "o";
+
+	// instrument
+	public static final String NAME = "name";
+	public static final String minimumTradeSize = "minimumTradeSize";
+	public static final String maximumOrderUnits = "maximumOrderUnits";
+	public static final String displayPrecision = "displayPrecision";
+	public static final String CLOSE_ASK = "closeoutAsk";
+	public static final String CLOSE_BID = "closeoutBid";
 
 	public static final String TIME = "time";
 	public static final String UNITS = "units";
@@ -101,13 +115,13 @@ public interface OandaJsonKey {
 
 	public static final String MIN_ID = "minId";
 
-	public static final String END = "end";
-	public static final String START = "start";
+	public static final String TO = "to";
+	public static final String FROM = "from";
 	public static final String CANDLE_FORMAT = "candleFormat";
 	public static final String INCLUDE_FIRST = "includeFirst";
 	public static final String GRANULARITY = "granularity";
 	public static final String CANDLES = "candles";
-	public static final String CLOSE_BID = "closeBid";
+
 	public static final String HIGH_ASK = "highAsk";
 	public static final String HIGH_BID = "highBid";
 	public static final String LOW_ASK = "lowAsk";
@@ -120,7 +134,7 @@ public interface OandaJsonKey {
 	public static final String LOW_MID = "lowMid";
 	public static final String HIGH_MID = "highMid";
 	public static final String CLOSE_MID = "closeMid";
-	public static final String CLOSE_ASK = "closeAsk";
+
 	public static final String STATUS = "status";
 	public static final String BID = "bid";
 	public static final String ASK = "ask";
